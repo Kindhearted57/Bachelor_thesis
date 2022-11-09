@@ -1,0 +1,34 @@
+\section{Introduction}
+\label{sec:intro}
+
+% bitcoin history, bitcoin is different from other sc-based. cryptocurrencies.
+Almost 12 years since bitcoin\cite{nakamoto2019bitcoin} was first mined, blockchain, which is an idea that became popular along with, has been growing super fast. There are  10,862 different cryptocurrencies for trade by 5th July, 2021, with a total market cap of \$1,364,980,204,657 \cite{coinmarketcap}. While there are a lot of other cryptocurrencies, bitcoin is still one of the most popular one, which dominated more than 60\% of the market \cite{coinmarketcap}.
+%Bitcoin anonymity -> anonymity lead to scam
+Anonymous is one of the most important features in Bitcoin. It ensures that it's hard to link bitcoin addresses with real-world entities, so that the information security of users is guaranteed. But at the same time, anonymity makes it easy to commit a crime without easily getting caught, therefore, bitcoin becomes a suitable tool for abuser to collect money from scams. When two users trade using bitcoin, the addresses of bitcoin is the only information provided, so it is hard to track who is behind the scams. Up to today, there are already many kinds of scams using bitcoin as a way to collect scam money. One of the most popular type is sextortion. Although sextortion is a new scheme, it has taken a large percentage in bitcoin scams. The abuser will normally send an email which claims they are in control of the victim's computer or contact list, and will make some compromising images public unless some amount of bitcoin is paid on time\cite{paquet2019spams}. Apart from sextortion, other new schemes continue to come into our sight. During the current pandemic time, various COVID-19 themed scams have emerged. Some abuser created new types of scams based on COVID-19 topics. For example, during July in 2020, some of the celebrities' twitter account have been hacked and posted information claiming to be giving back to community because of COVID-19, but one has to transfer a given amount of bitcoin to the address provided first, the hacker earned more than 10 bitcoin just from Barack Obama's twitter account\cite{barackobamascam}. 
+% The damage of BTC scam. The urgent to analyse it.
+The above examples show that the scams in Bitcoin is very harmful in the Bitcoin community, it can cause huge damage in personal property. It is urgent to comprehensively understand scams in bitcoin, and at the same time prevent more people from getting scammed. Firstly, a dataset should be constructed, then the features of the scam should be analysed to shed light on the scam schemes. Further, based on the feature extracted, there can be a method to detect more scam addresses. Few works published have focus on this topic, there still lacks a comprehensive understanding of Bitcoin scams.
+
+
+\textbf{This Paper.}
+% Describe the process of the experiment
+\begin{itemize}
+    \item \textbf{Dataset} 
+    
+    In this paper, we firstly collect scam addresses from bitcoinabuse.com\cite{bitcoinabuse}, there are 174,404 reports in out dataset. After filtering the repeated ones, we got 50,522 unique addresses.
+    \item \textbf{Distribution} 
+     The dataset also contains some information describing the features of the abuser. We analysed these information: the email addresses used by the abuser, and the url from which the victims get in touch with the scam, to find out how the scam information is distributed to victims. 
+     
+     
+     \item \textbf{Dataset Expension}
+     For the further analysis, we firstly filtered the unique addresses by if they have transactions, then we clean the dataset to remove the falsely reported addresses, with the help of PeckShield. Now our dataset contains 6,004 scam addresses. To prepare for the later detection step, we also collected 6,014 licit addresses. There are a total of 12,018 labelled addresses in our dataset. As we want to explorer the money-flow features of these addresses, we also collected 4,754,462 unlabelled addresses, these unlabelled addresses have direct transaction connection with the labelled addresses. 
+     \item \textbf{Clustering}
+      In this step, we firstly implemented multi-input clustering, the result shows, then we implemented the previous collected information to further cluster the addresses. We used the email information in the clustering. If multiple BTC addresses use the same email address to distribute the scams, we consider these addresses to be in the same cluster. In the end, we find out the top 10 clusters received a total of 1,620,599.08 bitcoins, the biggest cluster contains 136,309 addresses.
+     
+     \item \textbf{Detection}
+     In this section, we firstly implement traditional machine learning classification algorithm, then we explorer building a graph neural network which can take the graph structure of the dataset into consideration. The graph method is divided into supervised classification and semi-supervised classification. The result shows that our dataset can be used to perform classification with accuracy higher than 93\%, except for the semi-supervised situation.
+\end{itemize}
+
+
+
+
+

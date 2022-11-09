@@ -1,0 +1,48 @@
+Abstract
+
+一 Introduction
+比特币的发展->其他类型数字货币的发展->比特币用来收集scam收入的原因->Scam举例
+
+-> This paper
+
+
+二 Background and related work
+A Scams in cryptocurrency
+bitcoinabuse上面列出的类型详细描述，
+B Scam characterizing 
+related work
+C Money flow tracing and graph analysis
+
+UTXO -> CoinJoin 
+
+Mixer -> related work
+(后面涉及到blocksci的分析，coinjoin的分析)
+
+
+三 Data and Analysis
+
+A 分析原始数据的信息：
+* scam类别分布
+* Date分布（日期）
+* time分布（时间）
+* Address分布（每个地址对应的report数）
+B abuser分析
+* email分析（部分report提供了邮箱信息）
+report数目排名前十的邮箱地址，report数目排名前十的email提供商地址。
+->从时间角度看，跟2020年1月1日之前的相比，排名并没有变化。
+
+以bitcoin地址做排名的话，使用如outlook之类的知名邮箱提供商的比较多。
+=>综上，scam的特点是在短时间内引起广泛的影响。（非知名邮箱提供商的地址可能是临时使用的地址，report数量多可以表明scam影响大，从report排出来的地址在前面的是临时地址）
+* URL分析
+用正则筛出来url们，取前五个提供商。
+Money Flow
+
+
+
+***********************
+1 Introduction
+2 Background
+3 Study Design
+4 Characteristic of BTC scam 
+5 Clustering(Illicit Campaign)
+6 Illicit detection

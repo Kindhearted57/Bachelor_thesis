@@ -1,0 +1,141 @@
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+% The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+%\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+    
+\usepackage{graphicx}
+% Used for displaying a sample figure. If possible, figure files should
+% be included in EPS format.
+%
+% If you use the hyperref package, please uncomment the following line
+% to display URLs in blue roman font according to Springer's eBook style:
+% \renewcommand\UrlFont{\color{blue}\rmfamily}
+\usepackage{algorithm}
+\usepackage[noend]{algpseudocode}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage[most]{tcolorbox}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{url}
+
+\expandafter\def\expandafter\UrlBreaks\expandafter{\UrlBreaks%  save the current one
+  \do\a\do\b\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j%
+  \do\k\do\l\do\m\do\n\do\o\do\p\do\q\do\r\do\s\do\t%
+  \do\u\do\v\do\w\do\x\do\y\do\z\do\A\do\B\do\C\do\D%
+  \do\E\do\F\do\G\do\H\do\I\do\J\do\K\do\L\do\M\do\N%
+  \do\O\do\P\do\Q\do\R\do\S\do\T\do\U\do\V\do\W\do\X%
+  \do\Y\do\Z}
+
+\definecolor{commentgreen}{rgb}{0.3,0.5,0.5}
+\definecolor{keyred}{rgb}{0.63,0.129,0.258}
+\definecolor{codegray}{rgb}{0.1,0.1,0.1}
+\definecolor{codepurple}{rgb}{0.58,0.4,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+%\definecolor{maroon}{cmyk}{0,0.87,0.68,0.32}
+\definecolor{maroon}{rgb}{0.87,0.68,0.32}
+
+\usepackage{soul}
+\newcommand{\authnote}[2]{{\bf \textcolor{blue}{#1}: \em \textcolor{red}{#2}}}
+\newcommand{\baigd}[1]{\authnote{baigd}{#1}}
+\newcommand{\add}[1]{\textcolor{blue}{#1}}
+\newcommand{\remove}[1]{\textcolor{red}{\st{#1}}}
+\newcommand{\replace}[2]{\textcolor{red}{\st{#1}} \textcolor{blue}{#2}}
+\newcommand{\highlight}[1]{\textcolor{orange}{#1}}
+
+\lstdefinelanguage{JavaScript}{
+  keywords={typeof, new, true, false, catch, return, null, catch, switch, var, if, in, while, do, else, case, break, require, uint, assert, address},
+  keywordstyle=\color{blue}\bfseries,
+  ndkeywords={class, export, boolean, throw, implements, import, this, function},
+  ndkeywordstyle=\color{darkgray}\bfseries,
+  identifierstyle=\color{black},
+  sensitive=false,
+  comment=[l]{//},
+  morecomment=[s]{/*}{*/},
+  commentstyle=\color{purple}\ttfamily,
+  stringstyle=\color{red}\ttfamily,
+  morestring=[b]',
+  morestring=[b]"
+}
+
+\lstdefinestyle{mystyle}{
+%  	backgroundcolor=\color{backcolour},
+	language=JavaScript,   
+    commentstyle=\itshape\color{commentgreen},
+    keywordstyle=\bfseries\color{keyred},
+    numberstyle=\small,
+    stringstyle=\color{codepurple},
+	basicstyle=\small,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=2pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2,
+    frame={bottomline}
+}
+\lstset{style=mystyle}
+
+\newcommand{\littlesmall}[1]{\scalebox{0.9}{#1}}
+\newcommand{\smalltt}[1]{{\littlesmall{\texttt{#1}}}}
+\newcommand{\code}[1]{{\fontfamily{cmtt}\fontseries{m}\fontshape{n}\selectfont\small{#1}}}
+
+\newcommand{\oursystemtext}{XXX}
+\newcommand{\oursystem}{\code{{\oursystemtext}}}
+\newcommand*{\prompt}[1]{\textsf{\textbf{#1}}}
+\newcommand{\tab}{\hspace*{1em}}
+
+\newcommand{\he}[1]{{\color{blue} Ningyu: #1}}
+\newcommand{\ji}[1]{{\color{purple} Ru: #1}}
+\newcommand{\lei}[1]{{\color{red} Lei: #1}}
+\newcommand{\haoyu}[1]{{\color{red} HW: #1}}
+\usepackage{xspace}
+\usepackage{booktabs}
+
+    
+  
+\begin{document}
+
+\title{Characterizing Crowdsourcing Based Bitcoin Illicit Address}
+
+
+
+
+\maketitle
+
+\begin{abstract}
+
+\end{abstract}
+
+%%\begin{IEEEkeywords}
+%%keywords
+%%\end{IEEEkeywords}
+
+\input{intro.tex}
+\input{background.tex}
+\input{study_design.tex}
+\input{distribution.tex}
+\input{clustering.tex}
+\input{detection.tex}
+%\input{evaluation.tex}
+%\input{discussion.tex}
+\input{related.tex}
+
+\input{appendix.tex}
+%\input{conclusion.tex}
+
+\bibliographystyle{IEEEtran}
+\bibliography{citation.bib}
+
+\end{document}
